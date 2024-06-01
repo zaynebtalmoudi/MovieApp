@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url("https://fonts.googleapis.com/css2?family=Seymour+One&display=swap" rel="stylesheet");
+/* @import url(); */
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #09080b;
+}
+
+header{
+    margin: 3rem 0;
+    display: flex ;
+    justify-content: space-between;
+   
+}
+.app-title{
+    font-family: "Seymour One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    margin: 3rem ;
+    color: #3413b8; 
+    font-size: 3rem;
+    margin-left: 2rem;
+}
+
+/* ---------- Filter --------------- */
+.filter-inputs {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-right: 2rem;
+    width: 30rem;
+    padding: 40px 0;
+}
+.title-filter {
+    border: 2px solid #ffffff;
+    border-color: #ffffff;
+    height: 35px;
+    width: 250px;
+    padding: 5px;
+    border-radius: 120px;
+    outline: none;
+    color: #ffffff;
+    opacity: 0.5; 
+}
+.title-filter:focus {
+    padding: 0 20px;
+}
+.title-filter:focus::placeholder {
+    color: transparent;
+}
+.rate-filter{
+    border: 2px solid #ffffff;
+    border-color: #ffffff;
+    width:150px;
+    height: 35px;
+    border-radius: 120px;
+    color: #ffffff;
+    text-align: center;
+    font-size: .8rem;
+    opacity: 0.5;
+    font-weight: bold;
+}
+.rate-filter:focus{
+    outline: none;
+}
+.search-rate-selector{
+color: #ccc;
+}
+
+input::placeholder {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+}
+/* ------------------------------- */
+
+
+/* ------------- Cards Container ------------- */
+.container{
+    /* border: 2px solid red; */
+    position: relative; 
+    background-color: #0e0d12;
+    padding :40px 8%;   
+    display: flex !important;
+    justify-content:space-around !important;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+/* ------------------------------- */
+
+
+/* ------------------ Cards --------------- */
+.card {
+    width:18rem !important;
+    height: 26rem !important;
+    margin: 16px;
+    /* border: 2px solid #0e965d; */
+    background-color: transparent;
+    position: relative;
+    columns: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.card img{ 
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+.card .content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0,0.2),#ff0000d7);
+    padding: 65% 4% 0 4%;
+    opacity: 0;
+    transition: all 0.5s;
+
+}
+.card:hover .content{
+    opacity:1;
+    background-color: transparent;
+}
+.content .name{
+    font-size: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    background-color: transparent;
+}
+.content .infos{
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    background-color: transparent;
+}
+.fa-solid{
+    color: #f0d228;
+}
+.content .short-desc{
+    font-size: 14px;
+    line-height: 1.1;
+    padding: 6px 0;
+    color: #fff;
+    background-color: transparent;
+    
+}
+.fa-star{
+    background-color: transparent;
+}
+ .card:hover img{
+    transform: scale(1.05);
+    filter: blur(0.5px);
+}
+
+.trailer-button{
+    width: 8rem;
+    height: 2rem;
+    color: #c9c6c6;
+    border: #09080b;
+    background-color: #f0d228;
+    color: black;
+    border-radius: 8px;
+    font-size: 16px;
+}
+/* --------------------------------------------------- */
+
+
+ /* ---------------------- @media ---------------------------*/
+@media(max-width: 560px){
+    .card .content{
+        padding :95% 4% 0 4% ;
+    }
+    .content .name{
+        font-size: 32px;
+    }
+    .content .info,
+    .content .short-desc{
+        font-size: 14px;
+    }
+}
+/* --------------------------------------------------- */
+
+
+/* -------------------- Plus Card --------------- */
+.blankCard{
+    width: inherit;
+    height: inherit;
+    background-color: rgb(46, 41, 41);
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.blankCard img{
+    width: 100%;
+    background-color: rgb(46, 41, 41);
+    transition: all 0.5s;  
+}
+.blankCard:hover{
+   opacity: .8;
+}
+.blankCard:hover img {
+    background-color: rgb(46, 41, 41);
+    transform: scale(1.05);
+}
+/* ------------------------------- */
+
+
+
+
+
+
+
+/* ----------------- Add Form ----------------- */
+.add-form-container{
+    position: fixed;
+    top: 80px;
+    z-index: 100;
+    background-color: transparent;
+    height: 60vh; 
+    width: 100vw;
+}
+.add-form {
+    padding: 2rem;
+    width: 60%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    border-radius: 20px;
+    margin: auto;  
+    /* border: 2px solid rgb(42, 213, 12);  */
+    display: grid;
+    grid-template-columns:20% 20% 20% 20% 20% ;
+    grid-template-rows: 25% 25% 25% 25% ;
+}
+ /* ------------------- Grid Cols ---------------- */
+ .col1 {
+     grid-column: 1/4;
+     grid-row: 1 / 4;
+ }
+
+ .col2 {
+     grid-column: 4/6;
+     grid-row: 1 / 4;
+ }
+
+ .col3 {
+     grid-column: span 5;
+     grid-row: 4/5;
+ }
+ /* --------------------------------------------- */
+    
+.add-form .col1, .col3{
+background-color:transparent;
+}
+
+ .col1,
+ .col2 {
+    /* border: 2px solid blue; */
+ }
+
+
+  /* ------------------- All Col 1 Children ---------------- */
+  .col1{
+   
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-gap: 3%;
+
+  }
+.col1 *{
+   
+    background-color: #fffdfd;
+    color: #423f3f;
+    border-radius: 10px;
+    border: 2px solid #222222;
+    font-weight: 500;
+    font-size: .9rem;
+    padding: 10px;
+}
+
+.col1 *::placeholder{
+    color: #817e7e;
+    font-size: .9rem;
+    font-weight: 500;
+    padding: 0px;
+   
+}
+.col1 *:focus {
+    outline: none;
+}
+.col1 *:focus::placeholder {
+    color: transparent;
+}
+
+
+
+/* ------------------- Title Input ---------------- */
+.movie-title {
+    width: 97%; 
+    margin-right: 10%;
+    grid-area: 1 /1 / 2 / 4  ;
+   
+}
+
+
+/* ------------------- Rate Selector ---------------- */
+.rate-selector {
+    width: 60%; 
+    grid-area: 1 /4 / 2 / 6;
+    padding: 10px;
+}
+
+/* ------------------- Trailer Input ---------------- */
+.movie-trailer {
+    width: 144%;
+    grid-area: 2 /1 / 3/ 4;
+
+}
+
+/* ------------------- Movie Description---------------- */
+.col1 textarea{
+    width: 85%;
+    height: 80%;
+    grid-area: 3 / 1 / 6 / 6;
+}
+
+ /* ------------------------------------------ */
+
+
+ /* ---------------- Column 2 ----------------- */
+ .col2{
+
+    /* border: 5px solid rgb(33, 180, 97); */
+    position: relative;
+    columns: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+ }
+ .col2 img { 
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    
+ }
+
+/* ------------------------------- */
+
+ /* ---------------- Column 3 ----------------- */
+ .col3{
+    width: 100%;
+    /* background-color: red; */
+    /* border: 2px solid red; */
+    display: flex;
+    /* justify-content: start; */
+    align-items: center;
+    
+ }
+.save, .cancel {
+    color: #ccc;
+    background-color: #000000;
+    width: 100px;
+    height: 50px;
+    border: 2px solid #b9b5b5;
+    border-radius: 25px;
+    font-weight: 400;
+    font-size: 1.2rem; 
+}
+.save {
+    margin-right: 20px;
+    color: #4a4a4a;
+    background-color: rgb(255, 216, 0);
+    border: 2px solid rgb(255, 216, 0);
+}
+
+
+
+
+
